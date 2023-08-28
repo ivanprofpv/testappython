@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 def index(request):
-    return HttpResponse("<b>Тест</b>")
+    return render(request, 'main/index.html')
 
 def about(request):
-    return HttpResponse("<b>Тест страницы About</b>")
+    return render(request, 'main/about.html')
 
 def contacts(request):
-    return HttpResponse("<b>Тест страницы Contacts</b>")
+    return render(request, 'main/contacts.html')
 
