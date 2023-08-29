@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+        Новости
+{% endblock %}
+
+{% block content %}
+        <h1>Новости</h1>
+        <br>
+        <b>Тестовый текст для страницы новостей</b>
+
+        {% for i in values %}
+                {% if i == 'Hello' %}
+                        {% filter upper %}
+                                <p>{{ i }}</p>
+                        {% endfilter %}
+                {% endif %}
+        {% endfor %}
+        <br>
+        {% for i in object %}
+                <p>{{ i }}</p>
+        {% endfor %}
+{% endblock %}
