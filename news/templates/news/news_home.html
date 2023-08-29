@@ -7,17 +7,15 @@
 {% block content %}
         <h1>Новости</h1>
         <br>
-        <b>Тестовый текст для страницы новостей</b>
-
-        {% for i in values %}
-                {% if i == 'Hello' %}
-                        {% filter upper %}
-                                <p>{{ i }}</p>
-                        {% endfilter %}
-                {% endif %}
-        {% endfor %}
-        <br>
-        {% for i in object %}
-                <p>{{ i }}</p>
-        {% endfor %}
+        {% if news %}
+                {% for i in news %}
+                        <div class="alert alert-warning">
+                                <h2>{{ i.title }}</h2>
+                                <p>
+                                <h3>{{ i.anons }}</h3>
+                        </div>
+                {% endfor %}
+        {% else %}
+                <p>Нет новостей</p>
+        {% endif %}
 {% endblock %}
