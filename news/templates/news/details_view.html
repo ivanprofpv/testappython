@@ -10,4 +10,6 @@
         <p>Дата публикации: {{ article.date }}</p>
         <br>
         {{ article.full_text }}
+        <br>
+        <a href="{% url 'news-update' article.id %}" class="btn btn-info">Редактировать</a> | <a href="{% url 'news-delete' article.id %}" class="btn btn-danger">Удалить</a>
 {% endblock %}
