@@ -13,6 +13,8 @@
                                 <h2>{{ i.title }}</h2>
                                 <p>
                                 <h3>{{ i.anons }}</h3>
+                                <br>
+                                <a href="{% url 'news-detail' i.id %}" class="btn btn-warning">Читать далее...</a>
                         </div>
                 {% endfor %}
         {% else %}
